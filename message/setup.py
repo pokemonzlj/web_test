@@ -32,7 +32,7 @@ Created on 13/08/2021
 PACKAGE = "alibabacloud_sample"
 NAME = "alibabacloud_sample" or "alibabacloud-package"
 DESCRIPTION = "Alibaba Cloud SDK Code Sample Library for Python"
-AUTHOR = "liujun.zhu"
+AUTHOR = "zhu"
 AUTHOR_EMAIL = ""
 URL = "https://github.com/aliyun/alibabacloud-sdk"
 VERSION = __import__(PACKAGE).__version__
