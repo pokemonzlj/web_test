@@ -89,7 +89,7 @@ class Sample:
         message_info_dict['site_name'] = args[0]
         message_info_dict['module_name'] = args[1]
         message_info_dict['info'] = args[2]
-        client = Sample.create_client('LTAIS8jaK1xtYjF3', 'ed3yScsmavNzqecOTetWCcAYOAg70X')
+        client = Sample.create_client('LLLLLLLLLLLL', 'eEEEEEEEEEEEEee')
         send_sms_request = dysmsapi_20170525_models.SendSmsRequest(phone_numbers='11111111', sign_name="官网", template_code="SMS_222325107", template_param='%s'%message_info_dict)
         resp = await client.send_sms_async(send_sms_request)
         ConsoleClient.log(UtilClient.to_jsonstring(TeaCore.to_map(resp)))
