@@ -42,7 +42,7 @@ class Message:
     def send_error_message(numberlist=[], *args
         #*args: List[str],
     ) -> None:
-        client = Message.create_client('LTAIS8jaK1xtYjF3', 'ed3yScsmavNzqecOTetWCcAYOAg70X')
+        client = Message.create_client('LLLLLLLLLLLL', 'eEEEEEEEEE')
         # add_sms_template_request = dysmsapi_20170525_models.AddSmsTemplateRequest(
         #     template_type=1,
         #     template_name='执行报错',
@@ -91,7 +91,7 @@ class Message:
     def send_notification_message(numberlist=[], *args
         #*args: List[str],
     ) -> None:
-        client = Message.create_client('LTAIS8jaK1xtYjF3', 'ed3yScsmavNzqecOTetWCcAYOAg70X')
+        client = Message.create_client('LLLLLLLLLLLL', 'eEEEEEEEEE')
         # add_sms_template_request = dysmsapi_20170525_models.AddSmsTemplateRequest(
         number_string = ''
         if numberlist:
@@ -129,13 +129,13 @@ class Message:
         message_info_dict['site_name'] = args[0]
         message_info_dict['module_name'] = args[1]
         message_info_dict['info'] = args[2]
-        client = Message.create_client('LTAIS8jaK1xtYjF3', 'ed3yScsmavNzqecOTetWCcAYOAg70X')
-        send_sms_request = dysmsapi_20170525_models.SendSmsRequest(phone_numbers='15258177104,15868802869', sign_name="遨森官网", template_code="SMS_222325107", template_param='%s'%message_info_dict)
+        client = Message.create_client('LLLLLLLLLLLL', 'eEEEEEEEEE')
+        send_sms_request = dysmsapi_20170525_models.SendSmsRequest(phone_numbers='158688028611', sign_name="遨森官网", template_code="SMS_222325107", template_param='%s'%message_info_dict)
         resp = await client.send_sms_async(send_sms_request)
         ConsoleClient.log(UtilClient.to_jsonstring(TeaCore.to_map(resp)))
 
 
 if __name__ == '__main__':
     # Sample.main(sys.argv[1:])
-    # Message.send_error_message(['15258177104','15868802869'], 'US', '登陆', '点击登陆无响应')
-    Message.send_notification_message(['15258177104'], '2022-03-10', 15, ['IE','FR'])
+    # Message.send_error_message(['158688028611'], 'US', '登陆', '点击登陆无响应')
+    Message.send_notification_message(['111111111111'], '2022-03-10', 15, ['IE','FR'])
