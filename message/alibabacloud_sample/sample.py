@@ -41,7 +41,7 @@ class Sample:
     def main(
         args: List[str],
     ) -> None:
-        client = Sample.create_client('LTAIS8jaK1xtYjF3', 'ed3yScsmavNzqecOTetWCcAYOAg70X')
+        client = Sample.create_client('LLLLLLLLLLLL', 'eEEEEEEEEEEEEee')
         # add_sms_template_request = dysmsapi_20170525_models.AddSmsTemplateRequest(
         #     template_type=1,
         #     template_name='执行报错',
@@ -68,11 +68,11 @@ class Sample:
         message_info_dict['module_name'] = args[1]
         message_info_dict['info'] = args[2]
         print(message_info_dict)
-        send_sms_request = dysmsapi_20170525_models.SendSmsRequest(phone_numbers='15258177104,18858481249,13655883314,15869598945', sign_name="遨森官网", template_code="SMS_222325107", template_param='%s'%message_info_dict)
+        send_sms_request = dysmsapi_20170525_models.SendSmsRequest(phone_numbers='111111111', sign_name="官网", template_code="SMS_222325107", template_param='%s'%message_info_dict)
         resp = client.send_sms(send_sms_request)
         # query_send_details_request = dysmsapi_20170525_models.QuerySendDetailsRequest(
         #     send_date='20210813',
-        #     phone_number='15258177104',
+        #     phone_number='111111111',
         #     page_size=1,
         #     current_page=1
         # )
@@ -90,7 +90,7 @@ class Sample:
         message_info_dict['module_name'] = args[1]
         message_info_dict['info'] = args[2]
         client = Sample.create_client('LTAIS8jaK1xtYjF3', 'ed3yScsmavNzqecOTetWCcAYOAg70X')
-        send_sms_request = dysmsapi_20170525_models.SendSmsRequest(phone_numbers='15258177104,15868802869', sign_name="遨森官网", template_code="SMS_222325107", template_param='%s'%message_info_dict)
+        send_sms_request = dysmsapi_20170525_models.SendSmsRequest(phone_numbers='11111111', sign_name="官网", template_code="SMS_222325107", template_param='%s'%message_info_dict)
         resp = await client.send_sms_async(send_sms_request)
         ConsoleClient.log(UtilClient.to_jsonstring(TeaCore.to_map(resp)))
 
