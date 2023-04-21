@@ -42,7 +42,7 @@ class Sample:
     def main(
         args: List[str],
     ) -> None:
-        client = Sample.create_client('LTAI5tRixCF8bKRZ9PHbAmrg', 'dtspKKiYWfRbQgnluvn6D65kxxFYQ6')
+        client = Sample.create_client('LLLLLLLLLLLL', 'eEEEEEEEEEEEEee')
         send_sms_request = dysmsapi_20170525_models.SendSmsRequest()
         resp = client.send_sms(send_sms_request)
         ConsoleClient.log(UtilClient.to_jsonstring(TeaCore.to_map(resp)))
@@ -51,7 +51,7 @@ class Sample:
     async def main_async(
         args: List[str],
     ) -> None:
-        client = Sample.create_client('LTAI5tRixCF8bKRZ9PHbAmrg', 'dtspKKiYWfRbQgnluvn6D65kxxFYQ6')
+        client = Sample.create_client('LLLLLLLLLLLL', 'eEEEEEEEEEEEEee')
         send_sms_request = dysmsapi_20170525_models.SendSmsRequest()
         resp = await client.send_sms_async(send_sms_request)
         ConsoleClient.log(UtilClient.to_jsonstring(TeaCore.to_map(resp)))
