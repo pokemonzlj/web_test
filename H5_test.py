@@ -12,7 +12,7 @@ class do_test(H5_test):
 
     def total_test_pop(self, wait_time='6'):
         while True:
-            if self.check_time('15') or self.check_time('12') or self.check_time('19'):
+            if self.check_time('6') or self.check_time('12') or self.check_time('19'):
                 # logger= self.createlogger('POP_H5_TEST')
                 # sys.stdout = self.output_print
                 site_dict = self.get_site_dict()
@@ -46,24 +46,6 @@ class do_test(H5_test):
             else:
                 self.delay(1800)
                 # 每半个小时判定一次
-
-    def test_email(self):
-        headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36",
-            "content-type": "application/x-www-form-urlencoded; charset=UTF-8"}
-        data = {"name": 'yinglan.xiao', "email": 'yinglan.xiao@qq.com',
-                "comment": 'Test test have headers,address is https://www.aosom.de/contact/index/save/',
-                "telephone": '', "hideit": ''}
-        json_data = json.dumps(data)
-        coo = requests.get('https://www.aosom.de/page/contact-aosom')
-        cookies = coo.cookies.get_dict()  # 先对初始网页get拿到初始的cookie
-        for i in range(10):
-            response = requests.post('https://www.aosom.de/contact/index/save/', headers=headers, data=data,
-                                     cookies=cookies)
-            # response=requests.post('https://www.aosom.de/page/contact-aosom',headers=headers, data=data)
-            print(response.json())
-            # print(response.text)
-            print(response.status_code)
 
 
 if __name__ == '__main__':
